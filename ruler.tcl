@@ -2,7 +2,7 @@
 
 set DEFAULT_LEN 80
 
-proc spaces_for_dozen {n} {
+proc spaces_for_tens {n} {
     string repeat " " [expr 10 - [string length $n]]
 }
 
@@ -19,7 +19,7 @@ proc ruler {len} {
 
         append line_units "1234567890"
 
-        append line_tens [spaces_for_dozen $i]
+        append line_tens [spaces_for_tens $i]
         append line_tens $i
     }
 
